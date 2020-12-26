@@ -26,7 +26,7 @@ public class UnlockAccountRestController {
 	}
 
 	@PostMapping(value = "/unlockUserAcc", produces = "application/json", consumes = "application/json")
-	public ResponseEntity<String> unlockUserAcc(@ModelAttribute("unlockAcc") UnlockAccount acc, Model model) {
+	public ResponseEntity<String> unlockUserAcc(@RequestBody("unlockAcc") UnlockAccount acc, Model model) {
 
 		return new ResponseEntity<>("", HttpStatus.OK);
 	}
